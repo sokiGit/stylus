@@ -1,0 +1,78 @@
+/* ==UserStyle==
+@name           Roblox: Everything black
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    Pretty much all background colors are set to #000 or close to this value.
+@author         soki
+==/UserStyle== */
+
+@-moz-document domain("roblox.com") {
+    .dark-theme,
+    .dark-theme .content,
+    .dark-theme .scroller,
+    .dark-theme .chat-main,
+    .dark-theme .group-open,
+    .dark-theme .rbx-header,
+    .dark-theme .rbx-left-col,
+    .dark-theme .dropdown-menu,
+    .dark-theme .menu-vertical,
+    .dark-theme .section-content,
+    .dark-theme .container-footer,
+    .dark-theme .scroller.disabled,
+    .dark-theme .open .dropdown-menu,
+    .dark-theme .btn-generic-grid-xs,
+    .dark-theme .virtual-item-content,
+    .dark-theme .passkey-upsell-banner,
+    .dark-theme .asset-thumb-container,
+    .dark-theme .thumbnail-2d-container,
+    .dark-theme .btn-generic-slideshow-xs,
+    .dark-theme .rbx-tab .rbx-tab-heading,
+    .dark-theme .avatar .avatar-card-image,
+    .notification-stream-header.dark-theme,
+    .dark-theme .rbx-header .navbar-search,
+    .dark-theme .btn-generic-grid-xs:hover,
+    .dark-theme .btn-generic-grid-xs:focus,
+    .dark-theme .notification-stream-header,
+    .dark-theme .modal-dialog .modal-content,
+    .dark-theme .stack .stack-list .stack-row,
+    .dark-theme .rbx-tabs-horizontal .nav-tabs,
+    .dark-theme .btn-generic-slideshow-xs:hover,
+    .dark-theme .btn-generic-slideshow-xs:focus,
+    .dark-theme .horizontal-scroller .scroller .spacer,
+    .dark-theme .chat-container .chat-main .chat-header,
+    .dark-theme .dialogs .dialog-container .dialog-body,
+    .dark-theme .catalog-container .sticky .search-bars,
+    .dark-theme .dialogs .dialog-container .dialog-header,
+    .dark-theme .profile-avatar-right .profile-avatar-mask,
+    .dark-theme .catalog-container .sticky .topic-container,
+    .dark-theme .rbx-header .navbar-search .new-dropdown-menu,
+    .dark-theme .game-card-container .game-card-thumb-container,
+    .dark-theme .game-home-page-container .home-interleave-divider,
+    .dark-theme .slide-switcher .slide-item-container .slide-item-container-left,
+    .dark-theme .slide-switcher .slide-item-container .slide-item-container-right,
+    .dark-theme .new-notification-stream-2022 .notification-stream-container .notification-content-view .notification-stream-body,
+    .dark-theme .new-notification-stream-2022 .notification-stream-container .notification-content-view .notification-stream-body .container-empty,
+    .dark-theme .new-notification-stream-2022 .notification-stream-container .notification-content-view .notification-stream-body .notification-stream-loading,
+    .dark-theme .new-notification-stream-2022 .notification-stream-container .notification-content-view .notification-stream-body .notification-stream-scrollbar .notification-stream-list {
+        background-color: #000;
+    }
+    .dark-theme .hover-game-tile.focused,
+    .dark-theme .meta-actions-list-base .meta-actions-overlay,
+    .dark-theme .hover-game-tile.focused .featured-game-container,
+    .dark-theme .rbx-header .navbar-search .navbar-search-option.new-selected, 
+    .dark-theme .new-notification-stream-2022 .notification-stream-container .notification-content-view .notification-stream-body .notification-stream-scrollbar .notification-stream-list .notification-stream-item,
+    .dark-theme .new-notification-stream-2022 .notification-stream-container .notification-content-view .notification-stream-body .notification-stream-scrollbar .notification-stream-list .sendr-notification-background {
+        background-color: #070707
+    }
+    .dark-theme .popover.bottom > .arrow,
+    .dark-theme .popover.bottom > .arrow::after {
+        border-bottom-color: #000;
+    }
+    .dark-theme .modal-dialog .modal-content,
+    .dark-theme .meta-actions-list-base .meta-actions-overlay {
+        border: 1px solid #111;
+    }
+    .home-container {
+        max-width: 100%;
+    }
+}
