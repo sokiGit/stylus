@@ -9,6 +9,12 @@
 @-moz-document domain("roblox.com") {
     :root {
         --text: #aaa; /* applies to everything that was pure white before */
+        --darken: brightness(50%);
+    }
+    *:focus:focus-visible {
+        outline: 1px #2ba2aa;
+        outline-style: ridge;
+        outline-offset: 1px;
     }
     .dark-theme,
     .dark-theme .content,
@@ -90,6 +96,8 @@
     .dark-theme .text-name, 
     .dark-theme .text-link, 
     .dark-theme .text-title, 
+    .dark-theme .btn-growth-lg,
+    .dark-theme .btn-growth-md,
     .dark-theme .text-name:link, 
     .dark-theme .text-link:link, 
     .dark-theme .text-lead:link, 
@@ -112,7 +120,12 @@
     .dark-theme .text-link.xxsmall, 
     .dark-theme .text-link:visited, 
     .dark-theme .text-title:visited,
+    .dark-theme .btn-growth-md:link,
+    .dark-theme .btn-growth-lg:focus,
+    .dark-theme .btn-growth-lg:hover,
     .dark-theme .chat-windows-header,
+    .dark-theme .btn-growth-md:focus,
+    .dark-theme .btn-growth-md:hover,
     .dark-theme .text-link.small:link, 
     .dark-theme .text-name.small:link, 
     .dark-theme .text-link.xsmall:link, 
@@ -131,11 +144,13 @@
     .gotham-font.dark-theme .see-all-link,
     .dark-theme .text-name.xxsmall:active, 
     .dark-theme .text-link.xsmall:visited, 
-    .dark-theme .text-link.xxsmall:active, 
+    .dark-theme .text-link.xxsmall:active,
     .dark-theme .text-link.xxsmall:visited, 
     .dark-theme .text-name.xxsmall:visited, 
     .dark-theme .rbx-header .text-header:link,
     .dark-theme .stack .stack-list .stack-row,
+    .dark-theme .footer .text-footer-nav:hover,
+    .dark-theme .footer .text-footer-nav:focus,
     .gotham-font.dark-theme .refresh-link:link,
     .gotham-font.dark-theme .see-all-link-icon,
     .gotham-font.dark-theme .see-all-link:link,
@@ -150,6 +165,7 @@
     .gotham-font.dark-theme .touch .see-all-link,
     .gotham-font.dark-theme .refresh-link:active,
     .gotham-font.dark-theme .see-all-link:active,
+    .dark-theme .footer .text-footer-nav.privacy,
     .gotham-font.dark-theme .touch .refresh-link,
     .gotham-font.dark-theme .refresh-link:visited,
     .dark-theme .rbx-left-col li .text-nav:active,
@@ -165,14 +181,17 @@
     .gotham-font.dark-theme .refresh-link-icon:active,
     .gotham-font.dark-theme .touch .refresh-link:link,
     .gotham-font.dark-theme .touch .see-all-link-icon,
+    .dark-theme .footer .text-footer-nav.privacy:link,
     .gotham-font.dark-theme .touch .see-all-link:link,
     .gotham-font.dark-theme .touch .see-all-link:hover,
     .gotham-font.dark-theme .touch .refresh-link:hover,
     .gotham-font.dark-theme .refresh-link-icon:visited,
     .gotham-font.dark-theme .see-all-link-icon:visited,
+    .dark-theme .footer .text-footer-nav.privacy:active,
     .gotham-font.dark-theme .touch .see-all-link:active,
     .gotham-font.dark-theme .touch .refresh-link:active,
     .dark-theme .people-list .friend .friend-link:hover,
+    .dark-theme .footer .text-footer-nav.privacy:visited,
     .gotham-font.dark-theme .touch .see-all-link:visited,
     .gotham-font.dark-theme .touch .refresh-link:visited,
     .dark-theme .text-lead, .dark-theme .text-lead:active,
@@ -194,7 +213,7 @@
     .vlist .list-item .list-body .list-content .dark-theme a:hover,
     .vlist .list-item .list-body .list-content .dark-theme a.xsmall,
     .dark-theme .vlist .list-item .list-body .list-content a:active, 
-    .dark-theme .vlist .list-item .list-body .list-content a.xsmall, 
+    .dark-theme .vlist .list-item .list-body .list-content a.xsmall,
     .vlist .list-item .list-body .list-content .dark-theme a:active,
     .vlist .list-item .list-body .list-content .dark-theme a:visited,
     dark-theme .rbx-tabs-horizontal .rbx-tab.active .rbx-tab-heading,
@@ -223,6 +242,7 @@
     .dark-theme .voting-panel .users-vote .vote-details .vote-numbers .count-right {
         color: var(--text);
     }
+    .virtual-item-badge,
     .dark-theme .icon-like,
     .dark-theme .icon-game,
     .dark-theme .icon-Melee,
@@ -255,6 +275,9 @@
     .dark-theme .icon-Explosive,
     .dark-theme .icon-playaudio,
     .dark-theme .icon-Transport,
+    .dark-theme .btn-primary-md,
+    .dark-theme .btn-primary-xs,
+    .dark-theme .btn-primary-lg,
     .dark-theme .icon-robux-gold,
     .dark-theme .icon-robux-gray,
     .dark-theme .icon-votes-gray,
@@ -313,11 +336,13 @@
     .dark-theme .icon-common-notification-bell,
     .dark-theme .icon-playing-counts-gray-white-70,
     .dark-theme .icon-voice-mic-unmuted-16x16-hover,
+    #shopping-cart-btn-entry.shopping-cart-btn-entry,
     .gotham-font.dark-theme .refresh-link-icon::after,
     .gotham-font.dark-theme .see-all-link-icon::after,
     .dark-theme .gotham-font .refresh-link-icon::after,
     .dark-theme .gotham-font .see-all-link-icon::after,
     .dark-theme .game-card-info .info-label.icon-votes-gray,
+    .dark-theme .radio input[type="radio"]:checked + label::after,
     .gotham-font.light-theme .dark-theme .refresh-link-icon::after,
     .gotham-font.light-theme .dark-theme .see-all-link-icon::after,
     .light-theme .gotham-font .dark-theme .refresh-link-icon::after,
@@ -325,12 +350,13 @@
     .dark-theme .game-card-info .info-label.icon-playing-counts-gray,
     .dark-theme .game-card-info .info-label.icon-votes-gray-white-70,
     .light-theme .game-card-info .dark-theme .info-label.icon-votes-gray,
+    .item-price-value.icon-text-wrapper.clearfix.icon-robux-price-container,
     .dark-theme .game-card-info .info-label.icon-playing-counts-gray-white-70,
     .light-theme .game-card-info .dark-theme .info-label.icon-votes-gray-white-70,
     .light-theme .game-card-info .dark-theme .info-label.icon-playing-counts-gray,
-    .light-theme .game-card-info .dark-theme .info-label.icon-playing-counts-gray-white-70,
-    .dark-theme .voting-panel .users-vote .vote-details .vote-container .vote-percentage {
-        filter: brightness(50%);
+    .dark-theme .voting-panel .users-vote .vote-details .vote-container .vote-percentage,
+    .light-theme .game-card-info .dark-theme .info-label.icon-playing-counts-gray-white-70 {
+        filter: var(--darken);
     }
     .dark-theme .rbx-tabs-horizontal .rbx-tab.active .rbx-tab-heading {
         box-shadow: inset 0 -4px 0 0 var(--text);
@@ -338,11 +364,21 @@
     .dark-theme .rbx-header .rbx-navbar li:hover {
         border-bottom: 2px solid var(--text);
     }
+    .dark-theme .btn-growth-lg,
+    .dark-theme .btn-growth-md,
+    .dark-theme .btn-common-play-game-lg,
     .dark-theme .btn-common-play-game-lg {
         background-color: #1d5b44;
     }
+    .dark-theme .btn-growth-md:focus,
+    .dark-theme .btn-growth-lg:focus,
+    .dark-theme .btn-growth-lg:hover,
+    .dark-theme .btn-growth-md:hover,
     .dark-theme .btn-common-play-game-lg:focus,
     .dark-theme .btn-common-play-game-lg:hover {
         background-color: #145f43;
+    }
+    .dark-theme .btn-primary-xs {
+        z-index: 1;
     }
 }
