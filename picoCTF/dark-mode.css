@@ -1,0 +1,69 @@
+/* ==UserStyle==
+@name           picoctf.org - Apr 2024
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A new userstyle
+@author         Me
+==/UserStyle== */
+
+@-moz-document domain("picoctf.org") {
+    .navbar,
+    .list-group-item,
+    .problem-modal .problem-stats .ratings-group button,
+    .problem-modal .problem-stats .ratings-group div.rating,
+    .navbar .navbar-nav .dropdown-menu {
+        background: #060606e5 !important;
+    }
+    .list-group-item {
+        border: none;
+    }
+    .filter-list .list-group-item.active {
+        background: #4e7eff42 !important;
+    }
+    * {
+        color-scheme: dark !important;
+    }
+    .table,
+    body,
+    .white-content .card:not(.card-white) .pagination .page-item:not(.active) .page-link,
+    .navbar .navbar-nav .dropdown-menu .dropdown-item {
+        color: #fff;
+    }
+    .white-content .table > tbody > tr > td {
+        color: #fff !important;
+    }
+    .problem-modal .problem-stats,
+    .white-content .main-panel {
+        background: #101011;
+    }
+    .modal-content,
+    .white-content .card:not(.card-white) {
+        background: #161617;
+        box-shadow: 0 5px 20px -10px #000;
+    }
+    .white-content .input-group-prepend .input-group-text,
+    .white-content .form-control,
+    .white-content .card:not(.card-white) .card-body .card-category, .white-content .card:not(.card-white) .card-body .card-description, .white-content .card:not(.card-white) .card-body .card-title, .white-content .card:not(.card-white) .card-header .card-title,
+    .white-content h1, .white-content h2, .white-content h3, .white-content h4, .white-content h5, .white-content h6, .white-content ol li, .white-content p, .white-content pre, .white-content ul li {
+        color: #9ab5ff;
+    }
+    .white-content .input-group-prepend .input-group-text,
+    .input-group-append .input-group-text, .input-group-prepend .input-group-text,
+    .white-content .form-control {
+        border-color: #9ab5ff;
+    }
+    .white-content .table button.btn-neutral.btn-link, .white-content .table > thead > tr > th,
+    .modal-content .modal-header .title,
+    .white-content .footer .copyright, .white-content .footer ul li a,
+    .text-black-50,
+    .modal-content .modal-body p,
+    .white-content .card:not(.card-white) label:not(.btn),
+    .white-content .card:not(.card-white) .card-header, .white-content .card:not(.card-white) .card-header a[data-toggle="collapse"] {
+        color: #b5c9ff !important;
+    }
+    .svg-inline--fa.fa-magnifying-glass,
+    footer > div.container-fluid > div.copyright > div.row > div.col > a > img,
+    .svg-inline--fa.fa-thumbs-up {
+        filter: invert();
+    }
+}
