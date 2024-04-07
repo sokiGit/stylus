@@ -2,11 +2,11 @@
 @name           picoctf.org - Apr 2024
 @namespace      github.com/openstyles/stylus
 @version        1.0.0
-@description    A new userstyle
-@author         Me
+@description    A dark mode for picoCTF
+@author         soki
 ==/UserStyle== */
 
-@-moz-document domain("picoctf.org") {
+@-moz-document domain("play.picoctf.org") {
     .navbar,
     .list-group-item,
     .problem-modal .problem-stats .ratings-group button,
@@ -32,14 +32,18 @@
     .white-content .table > tbody > tr > td {
         color: #fff !important;
     }
+    body,
     .problem-modal .problem-stats,
     .white-content .main-panel {
         background: #101011;
     }
     .modal-content,
+    .featurebox-content,
+    #sponsor-list,
+    div.container-fluid:has(.container .section),
     .white-content .card:not(.card-white) {
-        background: #161617;
-        box-shadow: 0 5px 20px -10px #000;
+        background: #161617 !important;
+        box-shadow: 0 5px 20px -10px #000 !important;
     }
     .white-content .input-group-prepend .input-group-text,
     .white-content .form-control,
@@ -58,10 +62,12 @@
     .text-black-50,
     .modal-content .modal-body p,
     .white-content .card:not(.card-white) label:not(.btn),
+    .hint-content,
     .white-content .card:not(.card-white) .card-header, .white-content .card:not(.card-white) .card-header a[data-toggle="collapse"] {
         color: #b5c9ff !important;
     }
     .svg-inline--fa.fa-magnifying-glass,
+    div.container > div.section > div.row > div > div.text-center > a > img,
     footer > div.container-fluid > div.copyright > div.row > div.col > a > img,
     .svg-inline--fa.fa-thumbs-up {
         filter: invert();
