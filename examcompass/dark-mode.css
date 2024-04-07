@@ -1,0 +1,55 @@
+/* ==UserStyle==
+@name           examcompass.com - Apr 2024
+@namespace      github.com/openstyles/stylus
+@version        1.0.0
+@description    A dark mode for the examcompass.com website.
+@author         soki
+==/UserStyle== */
+
+@-moz-document domain("examcompass.com") {
+    #CookiebotWidget #CookiebotWidget-widgetContent,
+    #CookiebotWidget .CookiebotWidget-consent-details .CookiebotWidget-consent-details-box,
+    body {
+        background: #000;
+    }
+    .well,
+    .gk-main-menu > ul,
+    .gk-main-menu ul ul,
+    #cj-wrapper .list-group-item,
+    #cj-wrapper .panel-default > .panel-heading {
+        background: #333;
+        color: #fff;
+    }
+    .progress,
+    .gk-main-menu ul li a:active, .gk-main-menu ul li a:focus, .gk-main-menu ul li a:hover,
+    .gk-main-menu ul ul li:hover {
+        background: #222 !important;
+    }
+    #CookiebotWidget *,
+    h1, h2, h3, h4, h5, h6 {
+        color: #aaa;
+    }
+    .table-custom a {
+        color: #34687d;
+    }
+    .CookiebotWidget-main-logo,
+    .gk-mainmenu-toggle a {
+        filter: invert() hue-rotate(180deg);
+    }
+    .cert-name-corner-a-plus p {
+        filter: brightness(.5);
+    }
+    a[href$=".pdf"] {
+        filter: brightness(.5);
+        color: #78d8ff;
+    }
+    .well,
+    .div-custom,
+    body > footer,
+    body > header + section#gk-main::before,
+    #cj-wrapper .panel-default,
+    #cj-wrapper .panel-default > .panel-heading,
+    #cj-wrapper .list-group-item {
+        border-color: #444;
+    }
+}
