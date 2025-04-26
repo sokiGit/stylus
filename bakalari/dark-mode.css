@@ -1,0 +1,443 @@
+/* ==UserStyle==
+@name         bakalari darkmode
+@version      20250216.12.06
+@namespace    https://userstyles.world/user/sokiGit
+@description  Dark mode for the Bakaláři web app.
+@author       sokiGit
+@license      No License
+==/UserStyle== */
+
+@-moz-document domain("bakalari.YOUR.DOMAIN") {
+    /* Timetable coloring */
+    .day-item-hover.tooltip-bubble {
+        /* Defaults */
+        --c-bg: #fff;
+        --c-txt-prim: #000;
+        --c-txt-sec: #888;
+
+        /* Custom colors */
+        &[data-detail*="Počítačové sítě"] {
+            --c-bg: #004e2c;
+            --c-txt-prim: #00ff91;
+            --c-txt-sec: #00a763;
+        }
+        &[data-detail*="Matematika"] {
+            --c-bg: #205400;
+            --c-txt-prim: #6f0;
+            --c-txt-sec: #1aa900;
+        }
+        &[data-detail*="Ekonomika"] {
+            --c-bg: #003434;
+            --c-txt-prim: #00faff;
+            --c-txt-sec: #00898d;
+        }
+        &[data-detail*="Praktická cvičení"] {
+            --c-bg: #3f1700;
+            --c-txt-prim: #ff5a00;
+            --c-txt-sec: #903300;
+        }
+        &[data-detail*="Aplikační software"] {
+            --c-bg: #412a00;
+            --c-txt-prim: #fa0;
+            --c-txt-sec: #986400;
+        }
+        &[data-detail*="Programování"] {
+            --c-bg: #3f0025;
+            --c-txt-prim: #ff0096;
+            --c-txt-sec: #850050;
+        }
+        &[data-detail*="Literatura a umění"] {
+            --c-bg: #33003d;
+            --c-txt-prim: #d400ff;
+            --c-txt-sec: #76008d;
+        }
+        &[data-detail*="Anglický jazyk"] {
+            --c-bg: #003215;
+            --c-txt-prim: #00ff6c;
+            --c-txt-sec: #007c32;
+        }
+        &[data-detail*="Německý jazyk"] {
+            --c-bg: #270036;
+            --c-txt-prim: #b500ff;
+            --c-txt-sec: #62008d;
+        }
+        &[data-detail*="Společenské vědy"] {
+            --c-bg: #300f00;
+            --c-txt-prim: #cf6b00;
+            --c-txt-sec: #693d00;
+        }
+        &[data-detail*="Tělesná výchova"] {
+            --c-bg: #000927;
+            --c-txt-prim: #2c5cff;
+            --c-txt-sec: #1c34ad;
+        }
+        &[data-detail*="Chemie"] {
+            --c-bg: #454500;
+            --c-txt-prim: #ff0;
+            --c-txt-sec: #878700;
+        }
+        &[data-detail*="Český jazyk"] {
+            --c-bg: #001747;
+            --c-txt-prim: #2e7aff;
+            --c-txt-sec: #5e5c73;
+        }
+        &[data-detail*="Učební praxe"] {
+            --c-bg: #2a0000;
+            --c-txt-prim: #f00;
+            --c-txt-sec: #7a0000;
+        }
+
+        /* Set properties */
+        background: var(--c-bg);
+        transition: background .15s ease-out;
+        &:has(.zapsano) {
+            background: color-mix(in hsl, var(--c-bg), transparent);
+        }
+        &:hover {
+            background: color-mix(in hsl, var(--c-bg), #000 10%);
+        }
+        & > div > div.middle {
+            font-weight: 600;
+        }
+        & > div > div.middle, & > div > div.top > div.left {
+            color: var(--c-txt-prim);
+        }
+        & > div > div.bottom, & > div > div.top > div.right > div.first {
+            color: var(--c-txt-sec);
+        }
+        .zapsano, .day-row .day-item .middle.zapsano, .day-row .day-item.pink .middle.zapsano {
+            color: color-mix(in hsl, var(--c-txt-prim), transparent) !important;
+            text-shadow: 0 0 12px color-mix(in hsl, var(--c-txt-prim), #fff);
+        }
+        &.green {
+            background: #000 !important;
+        }
+    }
+
+    div.dayoff {
+        color: #2792ff;
+        font-weight: bold;
+        text-shadow: 0 0 18px color-mix(in hsl, 20% transparent, currentColor);
+        font-size: large;
+    }
+    
+    .day-item-volno {
+        background: #002447;
+    }
+
+    /* Custom theme */
+    .bk-middle,
+    .plan_of_action_list_table_white,
+    #plan_of_action_list_content ul li,
+    #plan_of_action_list_content,
+    .bk-submenu-actions,
+    #message_list_content,
+    .panels .left-panel > .content,
+    .bk-navtop .menu-dropdown .dropdown-content,
+    .bk-widget,
+    #loginBox,
+    .bk-timetable-cell .day-item-hover,
+    #filters,
+    .floating-box {
+        background: #0e0e0e;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .2);
+    }
+    .inputLogin,
+    .btn-login, .btn-connect {
+        border-radius: 8px;
+    }
+    .select .values .select-value:hover,
+    .day-item .empty {
+        background: rgba(255, 255, 255, .05);
+    }
+    #cm,
+    .bg-white,
+    .table_popup th,
+    .table_popup td,
+    .ui-widget-content,
+    .bk-dash-controlButton,
+    .dxeCalendar_NextBlueTheme,
+    .dxeButtonEdit_NextBlueTheme,
+    .predmet-radek:nth-child(2n+1),
+    .bk-header-more .dropdown-content,
+    .dxeButtonEditSys.dxeButtonEdit_NextBlueTheme td.dxic,
+    .dxeButtonEdit_NextBlueTheme .dxeEditArea_NextBlueTheme,
+    .dxeCalendar_NextBlueTheme td.dxMonthGridWithWeekNumbers,
+    #topheader #info-uzivatel.menu-dropdown .dropdown-content,
+    .left-panel > .content .lecture span.id,
+    .ui-tooltip.ui-widget.ui-widget-content,
+    .confirmation-section .confirmation-wrapper,
+    .bk-timetable-hours .bk-hour-wrapper,
+    .bk-timetable-day.day-name .bk-day-wrapper,
+    .bk-timetable-header,
+    .zalozka:not(.zalozka-aktivni):hover,
+    .select .values,
+    .dxeListBox_NextBlueTheme,
+    .dxeButtonEditButton_NextBlueTheme .dxEditors_edtDropDown_NextBlueTheme,
+    .right-panel > .content .bonus.top,
+    .filter-row,
+    .search button:disabled,
+    .telo_ankety .polozka_ankety .odpoved,
+    #new_message_footer,
+    .bg-gray,
+    .dx-texteditor-container,
+    .dx-texteditor-input,
+    .odd-day-row {
+        background-color: #2d2d2d !important;
+    }
+    .dx-checkbox.dx-state-readonly .dx-checkbox-icon,
+    .dx-texteditor.dx-state-disabled,
+    .dx-texteditor.dx-state-readonly, .dx-texteditor.dx-state-readonly input.dx-texteditor-input,
+    .dx-texteditor-container,
+    .dxWeb_edtCheckBoxUnchecked_NextBlueTheme,
+    .inputLogin,
+    .dxeTextBox_NextBlueTheme,
+    .reports_dropdown .dropdown-content,
+    .dxeTextBox_NextBlueTheme .dxeEditArea_NextBlueTheme,
+    [type="checkbox"]:not(:checked) + label::before, [type="checkbox"]:checked + label::before,
+    .dxWeb_edtCheckBoxCheckedDisabled_NextBlueTheme,
+    .bk-btn-radio .myButton, .dxWeb_edtCheckBoxChecked_NextBlueTheme {
+        background-color: #131313 !important;
+        background-size: 75%;
+        border-color: #2f2f2f;
+    }
+    .jiny {
+        border-bottom-color: #222;
+    }
+    .ui-tooltip.ui-widget.ui-widget-content,
+    .ui-widget-content,
+    .day-item > div:not(.empty),
+    .ui-widget.ui-widget-content,
+    .bk-widget .bk-widget-header,
+    .bk-widget .bk-widget-footer,
+    .dxeButtonEdit_NextBlueTheme,
+    .predmet-radek,
+    .search input#searched_text,
+    .search button:disabled,
+    .day-item .empty {
+        border-color: #fff2;
+    }
+    .zalozka-aktivni {
+        border-color: #fff4 !important;
+    }
+    .dxtcLite_NextBlueTheme > .dxtc-stripContainer .dxtc-leftIndent, .dxtcLite_NextBlueTheme > .dxtc-stripContainer .dxtc-spacer, .dxtcLite_NextBlueTheme > .dxtc-stripContainer .dxtc-rightIndent, .dxtcLite_NextBlueTheme > .dxtc-stripContainer .dxtc-sbWrapper, .dxtcLite_NextBlueTheme > .dxtc-stripContainer .dxtc-sbIndent, .dxtcLite_NextBlueTheme > .dxtc-stripContainer .dxtc-sbSpacer,
+    .dxtcLite_NextBlueTheme > .dxtc-stripContainer .dxtc-strip li:not(.zalozka-aktivni), .dxtcLite_NextBlueTheme > .dxtc-stripContainer li.zalozka:not(.zalozka-aktivni), .dxtcLite_NextBlueTheme > .dxtc-stripContainer li.dxtc-rightIndent, .dxtcLite_NextBlueTheme > .dxtc-stripContainer li.dxtc-sbIndent, .dxtcLite_NextBlueTheme > .dxtc-stripContainer li.dxtc-spacer {
+        border-bottom-color: #fff4 !important;
+    }
+    .dxtcLite_NextBlueTheme > .dxtc-stripContainer .dxtc-spacer:not(.dxtc-filler)::after {
+        background: #fff4;
+    }
+    #outer,
+    body, .main {
+        background-image: linear-gradient(-30deg, #000913, #1a0130,#260014);
+        color-scheme: dark;
+    }
+    .main .bk-footer,
+    .bk-navtop,
+    .bk-menu-logo,
+    .bk-sidenav .bk-menu-hide,
+    .bk-menu-empty,
+    .bk-sidenav ul > li > a,
+    #topheader,
+    .bk-timetable-btngroup,
+    .bk-timetable-selects select,
+    #c-s-bn, #s-sv-bn,
+    .bk-widget-marks .mark-line .mark-displayGrade,
+    .bk-timetable-btngroup > .btn-secondary,
+    .bk-timetable-row .bk-cell-wrapper,
+    .bk-sidenav ul > li > ul > li > a {
+        background-color: rgba(0, 0, 0, .6); 
+    }
+    .bk-timetable-row:nth-child(2n+1) .bk-cell-wrapper,
+    #cm .c_link:hover, #cm .c_link:active, #s-cnt button + button:hover, #s-cnt button + button:active, #s-c-bn:active, #s-c-bn:hover {
+        background-color: rgba(0, 0, 0, .75);
+    }
+    .bk-widget-events .event-calendar .dx-calendar-body thead tr th::after {
+        background-color: #fff1;
+    }
+    .right-panel > .content .detail_help h3,
+    .content-box h5,
+    header h2, #header h2,
+    figure.type-icon-set figcaption,
+    .type-icon-set p,
+    #filters .section,
+    .table_classic_next th,
+    .right-panel > .content .bonus .extra > p a.star-after,
+    .right-panel > .content .heading h3,
+    .telo_ankety .polozka_ankety .otazka > *, .survey-item .otazka > *,
+    .zalozka.zalozka-aktivni p,
+    .message_detail_header_sender,
+    .message_list_help h5,
+    .bk-widget-events .event-calendar .dx-calendar-body thead tr th {
+        color: #fff !important;
+    }
+    .tab-hodnoceni,
+    .tab-vaha,
+    .tab-datum,
+    .table_popup th,
+    .table_popup td,
+    .tab-poznamka,
+    .cislovka,
+    h4,
+    p,
+    .table_classic_next td,
+    #c-s-bn, #s-sv-bn,
+    .right-panel > .content .detail_help p,
+    .cc_div *, .cc_div ::before, .cc_div ::after,
+    .bk-widget-notices .notice-line .notice-text,
+    .calendar-notification-wrapper .calendar-notification-text .notification-title,
+    .bk-widget .bk-widget-body,
+    .bk-widget .bk-widget-footer .bk-widget-footer-icon,
+    .bk-header-more .dropdown-content .dropdown-section .dropdown-section-heading,
+    .bk-widget .bk-widget-footer .bk-widget-footer-text,
+    .dxgvControl_NextBlueTheme, tbody:nth-child(2n).dxgvDisabled_NextBlueTheme,
+    .left-panel > .content .lecture span.text,
+    .left-panel > .content .lecture span.date-time,
+    .select .values .select-value, .select > .value,
+    .select .values .select-value.selected.ico32-ovladani-potvrdit::before,
+    .lista > .tabs li.zalozka > a.dxtc-link,
+    .dxeListBoxItem_NextBlueTheme,
+    .dxeDisabled_NextBlueTheme, .dxeReadOnly_NextBlueTheme, .dxeDisabled_NextBlueTheme td.dxe,
+    label:not(.dx-field-item-label),
+    body input.dxeEditArea_NextBlueTheme,
+    .left-panel > .content .lecture .ico-detail,
+    .right-panel > .content .heading p,
+    .right-panel > .content .heading div.info,
+    .search input#searched_text,
+    .dx-datagrid,
+    .telo_ankety,
+    .dxtcLite_NextBlueTheme,
+    .zalozka p,
+    .progress_bar .vyplneno,
+    .pripojene_text,
+    .message_detail_body,
+    .message_detail_header_category,
+    .message_detail_header_date,
+    .dx-widget input, .dx-widget textarea,
+    body, .ui-widget-content {
+        color: #ddd;
+    }
+    .bk-timetable-btngroup > .btn-secondary:not(:disabled):not(.disabled).active,
+    #c-bns button:first-child:active, #c-bns button:first-child:hover, #s-bns button:first-child:active, #s-bns button:first-child:hover, #c-bns.swap button:last-child:active, #c-bns.swap button:last-child:hover {
+        background-color: #253b48;
+    }
+    .bx-wrapper .bx-prev,
+    .bx-wrapper .bx-next {
+        filter: invert();
+    }
+    button.priloha,
+    button.prazdne,
+    .cross-icon,
+    #FileManager_Splitter_Toolbar_DXI2_Img,
+    #FileManager_Splitter_Toolbar_DXI1_Img,
+    figure.type-icon-set > img {
+        filter: invert() brightness(1.5) hue-rotate(180deg);
+    }
+    img[src="next/images/shared/SandclockBila-96.gif"],
+    img[src="/next/images/logos/bakalari-logo.svg"] {
+        filter: invert() hue-rotate(180deg);
+    }
+    span.event-calendar-notification[style="background:#000000"] {
+        background: #bebebe !important;
+    }
+    .dodatek,
+    .bk-sidenav .bk-menu-hide,
+    .bk-sidenav ul li a,
+    a:not([href]):not([tabindex]),
+    .bk-sidenav ul ul li a,
+        .bk-sidenav ul li.second-menu-level a span[class^="ico32-modul-"]::before, .bk-sidenav ul li.second-menu-level a span[class*=" ico32-modul-"]::before, .bk-sidenav ul li.third-menu-level a span[class^="ico32-modul-"]::before, .bk-sidenav ul li.third-menu-level a span[class*=" ico32-modul-"]::before,
+    .bk-sidenav ul li a > span[class^="ico32-modul-"]::before, .bk-sidenav ul li a > span[class*=" ico32-modul-"]::before, .bk-sidenav ul ul li a span[class^="ico32-modul-"]::before, .bk-sidenav ul ul li a span[class*=" ico32-modul-"]::before {
+        color: #7a95af;
+    }
+     
+    .bk-timetable-cell .day-item-hover {
+        background-image: linear-gradient(152deg, #10051d 21%, #040717 100%);
+        border-radius: 6px;
+    }
+
+    .pink {
+        background-image: linear-gradient(152deg, rgb(82, 7, 45) 21%, rgb(40, 0, 3) 100%) !important;
+    }
+
+    .bubble.bubble-gray.bubble-right::after,
+    .bubble.bubble-gray.bubble-right::before,
+    .bubble.bubble-gray.bubble-left::after {
+        border-left-color: #2d2d2d;
+    }
+
+    #loginBox,
+    div.bk-widget.Other {
+        outline: 1px solid #fff0;
+        scale: 1;
+        transition: all .15s;
+    }
+
+    #loginBox:hover,
+    #loginBox:focus-within,
+    div.bk-widget.Other:hover {
+        outline: 1px solid #fff1;
+        scale: 1.0125;
+        transition: all .15s;
+        box-shadow: 0 4px 16px 0 rgba(0, 0, 0, .25);
+    }
+
+    .day-item {
+        border-left-color: #fff2;
+    }
+    
+    .left-panel > .content .lecture .ico-detail,
+    .day-row {
+        border-bottom-color: #fff2;
+    }
+    
+    .telo_ankety .polozka_ankety, .survey-item,
+    .dxfmControl_NextBlueTheme .dxfm-toolbar,
+    .lista {
+        background-image: linear-gradient(-180deg, #474747 0%, #2c2c2c 100%);
+    }
+    
+    .left-panel > .content .lecture {
+        border-top-color: #fff3;
+    }
+    
+
+    /* Converting colorful stuff to dark-mode variants */    
+    .bk-widget-timetable .timetable-line.absent .timetable-caption, .bk-widget-timetable .timetable-line.absent .timetable-subjectName {
+        background: #28ff0f1a;
+        color: #7edc73;
+    }
+
+    .bk-widget-timetable .timetable-line.absent .timetable-caption::after {
+        background: #7edc73;
+    }
+
+    .bk-widget-timetable .timetable-line.removed .timetable-caption, .bk-widget-timetable .timetable-line.removed .timetable-subjectName {
+        background: #ff4c4c2e;
+        color: #ff5656;
+    }
+
+    .bk-widget-timetable .timetable-line.removed .timetable-caption::after {
+        background: #ff5656;
+    }
+
+    /* Remove bs */
+    #cphmain_sponsorsPanel.sponsors-panel,
+    #salmondo,
+    .pr-2.pr-md-3.pr-lg-4.py-3.bk-system-baka.fr,
+    body > form#formlogin .bk-login-schoolName,
+    body > form#formlogin .mobile-app {
+        display: none !important;
+    }
+
+    /* UI Fixes */
+    body > form#formlogin div#inner {
+        display: flex;
+        flex-flow: column;
+        gap: 2rem;
+    }
+    
+    #topheader {
+        box-shadow: -1px 0 0 rgba(0,0,0,.6);
+    }
+}
