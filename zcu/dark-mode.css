@@ -1,0 +1,62 @@
+/* made specifically for zcu.cz and fav.zcu.cz, might be broken on other sites */
+:root {
+    --cc-bg: #111;
+    --cc-text: #eef;
+    --custom-c-blue: #0367bd;
+    --cc-btn-secondary-bg: #2f3133;
+    --cc-btn-secondary-hover-bg: #3e4144;
+    
+    color-scheme: dark;
+}
+
+body .cc_div .c-bn {
+    --cc-btn-secondary-bg: #2f3133;
+}
+
+body,
+.buttons,
+main,
+body div.block, body div.block:nth-child(2n+1),
+.table-striped th, .table-striped tbody tr:nth-child(2n),
+#Menu {
+    background: #111;
+}
+
+body.katedra section#Submenu.menu.block,
+.element.filtr-oboru select,
+main form.element.search button,
+.navigation-primary-submenu li.item a:hover, .navigation-primary-submenu li.item a.active,
+#Breadcrumbs.breadcrumbs.block,
+.block .btn-primary-small-invert,
+section#Bottom, section#Bottom div.content-width,
+.container-bg,
+.content.info-box, .element.info-box {
+    background: #222;
+}
+
+body.katedra .navigation-primary-submenu li.item a,
+.navigation-primary-submenu li.item a:hover, .navigation-primary-submenu li.item a.active,
+body {
+    color: #eee;
+}
+
+.back-to-category,
+.content.info-box h3.head-bold-btn, .element.info-box h3.head-bold-btn,
+main .article-item .head-bold-large, main .article-item .head-bold-small,
+.navigation-bottom div.item a,
+.block .head-bold-large, .block .head-bold-small, .block .head-bold-active,
+.news.block .info-box .news-header a,
+.block .head-light-large, .block .head-light-huge,
+.buttons .element.buttons li.item a.content span.btn-default-small,
+a, .block .navigation-primary .item a, .absolute div.date-bg, ul.bullets li::before, .block .btn-default-small, .block .btn-primary-small-invert, .block .navigation-primary .item ul.navigation-primary-submenu li a:hover, .block .element.info-banner a.btn-primary-big,
+.block .navigation-secondary .item a {
+    color: var(--custom-c-blue);
+}
+
+.buttons .element.buttons li.item a.content:hover {
+    background: var(--custom-c-blue);
+}
+
+.buttons .element.buttons li.item a.content {
+    border-color: var(--custom-c-blue);
+}
