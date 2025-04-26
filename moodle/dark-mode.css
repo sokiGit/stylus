@@ -1,0 +1,340 @@
+/* ==UserStyle==
+@name       moodle dark mode
+@version    20241125.09.23
+@namespace  ?
+==/UserStyle== */
+
+@-moz-document domain("moodle.YOUR.DOMAIN") {
+    /* Custom colors*/
+    :root {
+        --custom-primary: #bf0f87;
+        --custom-dark-green: #3d7849; 
+        /*--custom-primary: #0f6cbf;*/ /* default blue */
+        color-scheme: dark;
+    }
+    
+    .path-mod-assign td.earlysubmission, .path-mod-assign div.earlysubmission,
+    .path-mod-assign td.submissionstatussubmitted, .path-mod-assign div.submissionstatussubmitted, .path-mod-assign a:link.submissionstatussubmitted {
+        background-color: var(--custom-dark-green);
+        color: #fff;
+    }
+    
+    .courseindex .courseindex-section.current,
+    .course-content .current::before {
+        border-left-color: var(--custom-primary);
+        border-radius: 2px;
+    }
+    
+    .moremenu .nav-link.active {
+        border-bottom-color: var(--custom-primary);
+    }
+    
+    .moremenu .nav-link.active:focus, .moremenu .nav-link.active:hover {
+        border-bottom-color: color-mix(in hsl, var(--custom-primary), #fff 10%);
+    }
+    
+    a,
+    .btn-primary,
+    .moremenu .nav-link.active,
+    .primary-navigation .navigation .nav-link,
+    .moremenu .nav-link.active:focus, .moremenu .nav-link.active:hover {
+        transition: border-color .15s linear, background-color .15s linear, color .15 linear;
+    }
+    
+    .text-primary,
+    .page-link,
+    a {
+        color: var(--custom-primary) !important;
+    }
+    
+    .alert-info,
+    .message-app .message.send .time,
+    .activity-add:hover, .block-add:hover, .aalink.focus, a.focus.autolink, .aalink:focus, a.autolink:focus, #page-footer a:not([class]).focus, #page-footer a:not([class]):focus, .arrow_link.focus, .arrow_link:focus, a:not([class]).focus, a:not([class]):focus, .activityinstance > a.focus, .activityinstance > a:focus,
+    .page-link:hover,
+    a:hover {
+        color: color-mix(in hsl, var(--custom-primary), #fff 10%) !important;
+    }
+    
+    .activity-add:hover, .block-add:hover, .aalink.focus, a.focus.autolink, .aalink:focus, a.autolink:focus, #page-footer a:not([class]).focus, #page-footer a:not([class]):focus, .arrow_link.focus, .arrow_link:focus, a:not([class]).focus, a:not([class]):focus, .activityinstance > a.focus, .activityinstance > a:focus {
+        background-color: color-mix(in hsl, var(--custom-primary), transparent 85%) !important;
+        box-shadow: 0 .2rem color-mix(in hsl, var(--custom-primary), transparent 50%) !important;
+        border-radius: 2px;
+    }
+    
+    .badge-primary,
+    .btn-primary:focus, .btn-primary.focus,
+    .courseindex .courseindex-item.pageitem,
+    .maincalendar .calendarmonth td.today .day-number-circle,
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link,
+    .custom-control-input:checked ~ .custom-control-label::before,
+    .dropdown-item.active, .dropdown-item:active, .dropdown-item:hover, .dropdown-item:focus, .dropdown-item:focus-within,
+    .btn-primary {
+        background-color: var(--custom-primary);
+    }
+    
+    .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+        background-color: color-mix(in hsl, var(--custom-primary), #fff 20%);
+    }
+    
+    .alert-info, .calendar_event_course,
+    .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle,
+    .message-app .message.send {
+        background-color: color-mix(in hsl, var(--custom-primary), #000 50%) !important;
+    }
+    
+    .custom-select:focus,
+    .activity-add, .block-add,
+    .btn-primary:focus, .btn-primary.focus,
+    .custom-control-input:checked ~ .custom-control-label::before,
+    .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle,
+    .form-control:focus {
+        border-color: var(--custom-primary);
+    }
+    
+    .custom-control-input:not(:disabled):active ~ .custom-control-label::before,
+    .btn-primary {
+        border-color: color-mix(in hsl, var(--custom-primary), #fff 20%);
+    }
+    
+    .courseindex .courseindex-item.pageitem:hover, .courseindex .courseindex-item.pageitem:focus,
+    .btn-primary:hover {
+        background-color: color-mix(in hsl, var(--custom-primary), #fff 10%);
+    }
+    
+    
+    .btn-primary:hover {
+        border-color: color-mix(in hsl, var(--custom-primary), #fff 30%);
+    }
+    
+    .btn:focus, .btn.focus,
+    .custom-select:focus,
+    .drawer-toggles .drawer-toggler .btn:focus,
+    .custom-control-input:focus ~ .custom-control-label::before,
+    [role="treeitem"][aria-expanded="true"].focus > :first-child, [role="treeitem"][aria-expanded="true"]:focus > :first-child,
+    .form-control:focus {
+        box-shadow: 0 0 0 .2rem color-mix(in hsl, var(--custom-primary), transparent 50%);
+    }
+    
+    .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-primary.dropdown-toggle:focus,
+    .aabtn.focus, .aabtn:focus, .btn-link.focus, .btn-link:focus, .nav-link.focus, .nav-link:focus, .editor_atto_toolbar button.focus, .editor_atto_toolbar button:focus, .editor_atto_toolbar .atto_toolbar_row.focus, .editor_atto_toolbar .atto_toolbar_row:focus, [role="button"].focus, [role="button"]:focus, .list-group-item-action.focus, .list-group-item-action:focus, input[type="checkbox"].focus, input[type="checkbox"]:focus, input[type="radio"].focus, input[type="radio"]:focus, input[type="file"].focus, input[type="file"]:focus, input[type="image"].focus, input[type="image"]:focus, .sr-only-focusable.focus, .sr-only-focusable:focus, a.dropdown-toggle.focus, a.dropdown-toggle:focus, .modal-dialog[tabindex="0"].focus, .modal-dialog[tabindex="0"]:focus, .moodle-dialogue-base .closebutton.focus, .moodle-dialogue-base .closebutton:focus, button.close.focus, button.close:focus, .form-autocomplete-selection.focus, .form-autocomplete-selection:focus, [role="treeitem"]:not([aria-expanded="true"]).focus, [role="treeitem"]:not([aria-expanded="true"]):focus {
+        box-shadow: 0 0 0 .2rem var(--custom-primary);
+    }
+    
+    .moodle-dialogue-base .moodle-dialogue-wrap,
+    .fp-iconview .fp-thumbnail {
+        border-radius: .5rem;
+    }
+    
+    
+    /* Dark mode */
+    body {
+        background: #111;
+    }
+
+    pre,
+    body,
+    .btn,
+    .table,
+    .text-dark,
+    .badge-light,
+    .generaltable,
+    .form-control,
+    .dropdown-item,
+    .que .formulation,
+    .form-control:focus,
+    .message-app .message.send,
+    .navbar-light .navbar-brand,
+    .generaltable tbody tr:hover,
+    .generaltable tbody tr:hover,
+    .form-autocomplete-suggestions li,
+    i.icon.fa.fa-window-close.fa-fw:hover,
+    .navbar-light .navbar-nav .nav-link.show, 
+    .primary-navigation .navigation .nav-link,
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link:focus,
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link:focus,
+    .navbar-light .navbar-nav .nav-link.active,
+    .navbar-light .navbar-nav .show > .nav-link,
+    .courseindex .courseindex-item.pageitem > a,
+    .navbar-light .navbar-nav .active > .nav-link,
+    .popover.footer .popover-body .footer-section a,
+    .nav-pills .nav-link.active, .nav-pills .show > .nav-link,
+    .path-mod-assign td.submissionnotgraded, .path-mod-assign div.submissionnotgraded,
+    .dropdown-item.active, .dropdown-item:active, .dropdown-item:hover, .dropdown-item:focus, .dropdown-item:focus-within,
+    .path-grade-report-user .user-grade th.category a.toggle-category i, .grade-report-user .user-grade th.category a.toggle-category i,
+    .courseindex .courseindex-item:hover .courseindex-link, .courseindex .courseindex-item:hover .courseindex-chevron, .courseindex .courseindex-item:focus .courseindex-link, .courseindex .courseindex-item:focus .courseindex-chevron,
+    .drawer, #region-main, .form-control, .dropdown-menu, .list-group-item, .moremenu .nav-tabs, .pagelayout-login #page, .moremenu .nav-link:hover, #page.drawers .main-inner, .moremenu .nav-link:focus, .moremenu .nav-link.active:focus, .popover-region-footer-container, .secondary-navigation .navigation, a.bg-secondary:hover, a.bg-secondary:focus, button.bg-secondary:hover, button.bg-secondary:focus, .moremenu .nav-link.active:hover,
+    .primary-navigation .navigation .nav-link {
+        color: #fff !important;
+    }
+
+    .close,
+    .close:hover,
+    .yui3-button,
+    .popover-body,
+    .form-control,
+    .generaltable,
+    .que pre > span,
+    .badge-secondary,
+    .form-autocomplete-downarrow,
+    .message-app .message.received,
+    i.icon.fa.fa-window-close.fa-fw,
+    div.editor_atto_toolbar button .icon,
+    .message-app a, .message-app .btn-link,
+    .popover.footer .popover-body .footer-section a .icon,
+    .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link,
+    .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd.yui3-widget-hd,
+    .courseindex .courseindex-item .courseindex-link, .courseindex .courseindex-item .courseindex-chevron,
+    .navbar-light .navbar-nav .nav-link {
+        color: #ddd;
+    }
+    .popover,
+    .page-link,
+    .message-app,
+    .bg-secondary,
+    .btn-secondary,
+    .modal-content,
+    .popover-region-container,
+    .form-autocomplete-suggestions,
+    .editor_atto_toolbar button:hover,
+    .description .course-description-item,
+    .path-mod .activity-header:not(:empty),
+    .btn.btn-icon:hover, .btn.btn-icon:focus,
+    .que.essay .qtype_essay_response.readonly,
+    .maincalendar .calendarmonth .clickable:hover,
+    .bg-white {
+        background: #1e1e1e !important;
+    }
+
+    .custom-select {
+        background: #1e1e1f url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23fff' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") right .75rem center / 8px 10px no-repeat;
+    }
+
+    .drawer,
+    #region-main,
+    .form-control,
+    .dropdown-menu,
+    .badge-secondary,
+    .list-group-item,
+    .moremenu .nav-tabs,
+    div.editor_atto_toolbar,
+    .custom-select:disabled,
+    .pagelayout-login #page,
+    .moremenu .nav-link:hover,
+    #page.drawers .main-inner,
+    .moremenu .nav-link:focus,
+    .editor_atto_content_wrap,
+    .message-app .message.received,
+    table.quizreviewsummary td.cell,
+    .moremenu .nav-link.active:focus,
+    .popover-region-footer-container,
+    .secondary-navigation .navigation,
+    .drawer-toggles .drawer-toggler .btn,
+    a.bg-secondary:hover, a.bg-secondary:focus,
+    .path-mod-quiz #mod_quiz_navblock .qnbutton,
+    .moodle-dialogue-base .moodle-dialogue-wrap,
+    .form-control:disabled, .form-control[readonly],
+    button.bg-secondary:hover, button.bg-secondary:focus,
+    .path-grade-report-user .user-grade td, .grade-report-user .user-grade td,
+    .path-grade-report-user .user-grade tbody tr, .grade-report-user .user-grade tbody tr,
+    .path-grade-report-user .user-grade th.category, .grade-report-user .user-grade th.category,
+    .path-grade-report-user .user-grade .baggt, .path-grade-report-user .user-grade .baggb, .grade-report-user .user-grade .baggt, .grade-report-user .user-grade .baggb,
+    .path-grade-report-user .user-report-container, .grade-report-user .user-report-container,.path-grade-report-user .user-grade thead th, .grade-report-user .user-grade thead th,
+    .path-grade-report-user .user-grade th.column-itemname:not(.header, .category, .baggt, .baggb), .grade-report-user .user-grade th.column-itemname:not(.header, .category, .baggt, .baggb),
+    .moremenu .nav-link.active:hover {
+        background: #262626 !important;
+    }
+
+    textarea,
+    .bg-light,
+    .btn-light,
+    .que .info,
+    .login-container,
+    .que .formulation,
+    .fp-select .fp-thumbnail,
+    .activity-add, .block-add, 
+    .simplesearchform .btn-submit,
+    table.quizreviewsummary th.cell,
+    div.editor_atto_toolbar div.atto_group,
+    .message-app .btn.btn-link.btn-icon:focus,
+    .message-app .btn.btn-link.btn-icon:hover,
+    .fp-iconview .fp-filename-field .fp-filename,
+    .card {
+        background-color: #222 !important;
+    }
+
+
+    .activity-add:hover, .block-add:hover,
+    .aalink.focus, a.focus.autolink, .aalink:focus, a.autolink:focus, #page-footer a:not([class]).focus, #page-footer a:not([class]):focus, .arrow_link.focus, .arrow_link:focus, a:not([class]).focus, a:not([class]):focus, .activityinstance > a.focus, .activityinstance > a:focus {
+        background: #292e33;
+        color: #6ca6e1;
+        box-shadow: 0 -.2rem #292e33,0 .2rem #33383d;
+    }
+
+    .border,
+    .page-link,
+    .btn-light,
+    .que .info,
+    .course-section,
+    .dropdown-divider,
+    .navbar.fixed-top,
+    .custom-select:disabled,
+    .content-item-container,
+    .fp-select .fp-thumbnail,
+    .popover-region-container,
+    .fp-iconview .fp-thumbnail,
+    .fp-select .fp-thumbnail img,
+    .form-autocomplete-suggestions,
+    .popover-region-footer-container,
+    .secondary-navigation .navigation,
+    .generaltable th, .generaltable td,
+    .activity-item:not(.activityinline),
+    div.editor_atto_toolbar div.atto_group,
+    .moodle-dialogue-base .moodle-dialogue-wrap,
+    .path-mod-quiz #mod_quiz_navblock .qnbutton .thispageholder,
+    .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd,
+    .path-grade-report-user .user-grade td.item, .grade-report-user .user-grade td.item,
+    .path-grade-report-user .user-grade th.category, .grade-report-user .user-grade th.category,
+    .path-grade-report-user .user-grade th.column-itemname:not(.header, .category, .baggt, .baggb), .grade-report-user .user-grade th.column-itemname:not(.header, .category, .baggt, .baggb),
+    .popover-region-header-container {
+        border-color: #333 !important;
+    }
+
+    .alert-success, .environmenttable .ok {
+        color: #c6ffc6;
+        background-color: #40853b;
+    }
+
+    textarea {
+        color: #fff !important;
+        border: 1px solid;
+    }
+
+    /* migth be broken */
+    img[src$="/theme/image.php/boost/core/1731680040/i/arrow-left"],
+    img[src$="/theme/image.php/boost/block_timeline/1726761111/activities"],
+    img[src$="/theme/image.php/boost/quiz/1726761111/monologo?filtericon=1"],
+    img[src$="/theme/image.php/boost/assign/1726761111/monologo?filtericon=1"],
+    img[src$="/theme/image.php/boost/core/1726761111/i/arrow-left"] {
+        filter: invert();
+    }
+
+    .alert-info,
+    .calendar_event_course {
+        background-color: #1e3366;
+    }
+
+    .alert-info {
+        color: #6593ff;
+        border-color: #7fa5ff;
+    }
+    .message-app .day,
+    a.dimmed, a.dimmed:link, a.dimmed:visited, a.dimmed_text, a.dimmed_text:link, a.dimmed_text:visited, .dimmed_text, .dimmed_text a, .dimmed_text a:link, .dimmed_text a:visited, .usersuspended, .usersuspended a, .usersuspended a:link, .usersuspended a:visited, .dimmed_category, .dimmed_category a {
+        color: #6a6a6a;
+    }
+    
+    #page.drawers {
+        scrollbar-color: #262626 #111;
+    }
+}
