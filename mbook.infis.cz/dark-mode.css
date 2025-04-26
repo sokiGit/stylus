@@ -1,0 +1,94 @@
+/* a very specific style - for the non-finalized version of mBook */
+:root {
+    --white-text: #fff;
+    --infis-blue-lighter: #3392c9;
+    --infis-blue-light: #2b81b3;
+    --infis-blue: #4f82f4;
+    --infis-blue-darker: #3665cc;
+    --white-cream: #19191a;
+    --white-dark: #272728;
+    --gray: #333;
+    --gray-2: #555;
+    --black: #eee;
+    --black-lighter: #333;
+    --green: #45a834;
+    --green-darker: #409c30;
+    --red: #ff4444;
+    --red-darker: #e60000;
+    --orange: #e65032;
+    --orange-darker: #cc3719;
+    
+    color-scheme: dark;
+}
+
+/* Color fix */
+#root {
+    color: var(--black);
+    background: var(--white-cream);
+}
+
+.searchValue {
+    background: var(--white-cream);
+}
+
+.SearchBar input {
+    color: var(--white-text);
+}
+
+.active {
+    background: color-mix(in hsl, var(--white-dark), var(--black) 10%);
+}
+
+.Filter {
+    background: var(--white-cream);
+}
+
+.resetFilter,
+.popularityButton {
+    color: var(--white-text);
+}
+
+.logoINFIS {
+    filter: invert() hue-rotate(180deg);
+}
+
+.bookCategoryItem {
+    background: #fff2;
+}
+
+dialog {
+    background: var(--white-cream);
+    color: var(--black);
+}
+
+.closeButton svg {
+    fill: var(--black);
+}
+
+.pozadí {
+    background: #111;
+}
+
+.loginWindow {
+    background: #222;
+}
+
+.rightsWarning {
+    color: #ff4040;
+}
+
+/* UI changes */
+.LibraryOption,
+#Library,
+.Filter > div:first-child {
+    border: none;
+}
+
+.searchValue {
+    border-radius: 22px;
+}
+
+.Book img {
+    border-radius: .85rem;
+    object-fit: cover; /* or contain */
+}
